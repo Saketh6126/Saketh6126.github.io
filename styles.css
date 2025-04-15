@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.9;
+}
+
+header {
+  background: linear-gradient(135deg, #111 0%, #444 100%);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  background: #222;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #ff6f61;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #111;
+  position: relative;
+}
+
+.timeline-entry {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-entry h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.timeline-entry p {
+  color: #333;
+}
+
+.timeline-entry a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cv-link:hover {
+  background: #333;
+  transition: background 0.3s ease;
+}
+
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 16px;
+}
+
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.horizontal-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.horizontal-layout .text {
+  flex: 3;
+  min-width: 300px;
+  font-size: 1.1rem;
+}
+
+.horizontal-layout .image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.horizontal-layout img {
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.horizontal-layout img:hover {
+  transform: scale(1.05);
+}
+
+.alternate {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.alternate img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.alternate .text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.alternate img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .horizontal-layout, .alternate {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .horizontal-layout .image, .alternate img {
+    justify-content: center;
+  }
+
+  .horizontal-layout img, .alternate img {
+    max-width: 100%;
+  }
+}
+
+.alternate.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ff6f61;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+section h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about-container h2 {
+  margin-bottom: 10px;
+}
+
+.about-container {
+  padding-top: 20px;
+}
+
+section:focus,
+section h2:focus {
+  outline: none;
+}
