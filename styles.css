@@ -258,3 +258,42 @@ section:focus,
 section h2:focus {
   outline: none;
 }
+
+#text-input {
+  margin-top: 30px; 
+}
+
+#text-box {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#analyze-btn {
+  padding: 15px 30px; /* Adjust padding for more balanced button size */
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#analyze-btn:hover {
+  background-color: #ff4500;
+}
+
+#output {
+  display: none;
+  margin-top: 10px; /* Adjust margin-top to reduce extra space */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
